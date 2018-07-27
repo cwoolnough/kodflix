@@ -1,0 +1,41 @@
+
+ .cover {
+   flex: 1 1 300px;
+   position: relative;
+ }
+ 
+ .movie{
+   height: 100%;
+   width: 100%;
+ } 
+ 
+ .cover-title {
+   background-color: #222;
+   color: #ffffff;
+   font-size: 1rem;
+   letter-spacing: 0.2rem;
+   text-shadow: 2px 2px 2px gray;
+   width: 100%;
+   position: absolute;
+   bottom: 0;
+   margin: 0;
+   padding: 0rem; 
+   z-index: 1;
+   opacity: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 0px;
+   transition: 1s;
+   overflow: hidden;
+ }
+ 
+ /* .image-row-movie-title h1 { 
+   margin: 0;
+ } */
+ 
+ .cover:hover .cover-title {
+   opacity: 1;
+   height: 15%;
+ } 
+ 
