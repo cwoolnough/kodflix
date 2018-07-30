@@ -12,12 +12,12 @@ class Gallery extends Component {
    render() {
       return (
          <div className="container-row">
-            <Cover src={Avengers} title="Avengers" />
-            <Cover src={JurassicWorld} title="Jurassic World" />
-            <Cover src={MammaMia} title="Mamma Mia" />
-            <Cover src={Rampage} title="Rampage" />
-            <Cover src={Sicario} title="Sicario" />
-            <Cover src={Siberia} title="Siberia" />
+            <Cover src={Avengers} title="Avengers" id="_Avengers" />
+            <Cover src={JurassicWorld} title="Jurassic World" id="_Jurassic_World" />
+            <Cover src={MammaMia} title="Mamma Mia" id="_Mamma_Mia" />
+            <Cover src={Rampage} title="Rampage" id="_Rampage"/>
+            <Cover src={Sicario} title="Sicario" id="_Sicario"/>
+            <Cover src={Siberia} title="Siberia" id="_Siberia"/>
          </div>
       );
    }
