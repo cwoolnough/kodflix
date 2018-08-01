@@ -7,7 +7,7 @@ class Gallery extends Component {
    render() {
       return (
          <div className="container-row">
-            {Movies.map(movie => <Cover src={movie.src} title={movie.title} alt={movie.title} id={movie.id} key={movie.id} />
+            { Movies.map(movie => <Cover src={movie.src} title={movie.title} alt={movie.title} id={movie.id} key={movie.id} />
             )}  
          </div>
       );

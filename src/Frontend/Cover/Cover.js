@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 function Cover(props) {
    return (
-      
          <Link to={props.id} className="cover">
             <img src={props.src} alt={props.title} id={props.id} className="movie" />
             <div className="cover-title">
