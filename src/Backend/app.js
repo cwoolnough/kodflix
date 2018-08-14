@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
+const Movies = require('./movies')
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/rest/movies', (req, res) => res.send(Movies))
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
