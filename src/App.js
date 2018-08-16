@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Gallery from './Frontend/Gallery/Gallery';
 import Details from './Frontend/Details/Details';
 import NotFound from './Frontend/NotFound/NotFound';
-import './App.css';
+import './App.less';
 
 class App extends Component {
   render() {

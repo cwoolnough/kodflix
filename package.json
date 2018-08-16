@@ -5,17 +5,20 @@
   "dependencies": {
     "express": "^4.16.3",
     "react": "^16.4.1",
+    "react-app-rewire-less": "^2.1.2",
+    "react-app-rewired": "^1.5.2",
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm-run-all build start-backend",
+    "start-frontend": "react-app-rewired start",
     "start-backend": "nodemon src/backend/app.js",
-    "start-all": "npm-run-all -p start start-backend",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start-dev": "npm-run-all -p start-frontend start-backend",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-app-rewired eject"
   },
   "devDependencies": {
     "nodemon": "^1.18.3",
