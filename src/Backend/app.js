@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const Movies = require('./movies')
 const port = process.env.PORT || 3001;
+const path = require('path')
+
 
 app.get('/rest/movies', (req, res) => res.send(Movies))
 
