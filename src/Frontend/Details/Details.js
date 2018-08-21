@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from "react-router-dom";
 import './Details.css';
+import Loading from '../Loading/Loading';
 
 class Details extends Component {
       constructor(props) {
             super(props);
 
-            this.state = { 
+            this.state = {
                   movie: {},
                   loading: false
             };
@@ -25,8 +26,8 @@ class Details extends Component {
 
       render() {
 
-            if(!this.state.loading){
-                  return <div>Loading...</div>
+            if (!this.state.loading) {
+                  return <Loading />
             }
 
             return (
@@ -48,6 +49,7 @@ class Details extends Component {
                                           </div>
                                     </div>
                               </div>
+
                         )
             )
       };
