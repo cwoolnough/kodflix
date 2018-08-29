@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "express": "^4.16.3",
+    "mongodb": "^3.1.4",
     "react": "^16.4.1",
     "react-app-rewire-less": "^2.1.2",
     "react-app-rewired": "^1.5.2",
@@ -15,7 +16,8 @@
     "start": "npm-run-all build start-backend",
     "start-frontend": "react-app-rewired start",
     "start-backend": "nodemon src/backend/app.js",
-    "start-dev": "npm-run-all -p start-frontend start-backend",
+    "start-dev": "npm-run-all -p start-frontend start-backend start-db",
+    "start-db": "mongodb",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-app-rewired eject"
