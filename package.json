@@ -16,8 +16,8 @@
     "start": "npm-run-all build start-backend",
     "start-frontend": "react-app-rewired start",
     "start-backend": "nodemon src/backend/app.js",
-    "start-dev": "npm-run-all -p start-frontend start-backend start-db",
-    "start-db": "mongodb",
+    "start-dev": "npm-run-all -p start-db start-frontend start-backend ",
+    "start-db": "mongod",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-app-rewired eject"
