@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "mongodb": "^3.1.4",
     "react": "^16.4.1",
@@ -13,10 +14,10 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "start": "npm-run-all build start-backend",
+    "start": "NODE_ENV=PRD npm-run-all build start-backend",
     "start-frontend": "react-app-rewired start",
     "start-backend": "nodemon src/backend/app.js",
-    "start-dev": "npm-run-all -p start-db start-frontend start-backend ",
+    "start-dev": "NODE_ENV=DEV npm-run-all -p start-db start-frontend start-backend ",
     "start-db": "mongod",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",

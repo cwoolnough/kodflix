@@ -1,13 +1,17 @@
 const MongoClient = require('mongodb').MongoClient;
-const url = "mongodb://kodflix:kodflix@127.0.0.1:27017/kodflix";
+require('dotenv').config()
+const url = process.env[`DB_URL_${process.env.NODE_ENV}`];
+//process.env.NODE_ENV -> 'DEV', 'PRD'
+const databaseName = url.substr(url.lastIndexOf('kodflix'));
+
 
 function connect() {
     return new Promise((resolve, reject) => {
-        MongoClient.connect(url, function(err, db) {
-            if (err) reject (err);
-            const dbo = db.db("kodflix");
+        MongoClient.connect(url,{ useNewUrlParser: true }, function (err, db) {
+            if (err) reject(err);
+            const dbo = db.db(databaseName);
             resolve(dbo);
-          });
+        });
     });
 }
 
