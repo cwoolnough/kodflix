@@ -16,7 +16,7 @@
   "scripts": {
     "start": "NODE_ENV=PRD npm-run-all build start-backend",
     "start-frontend": "react-app-rewired start",
-    "start-backend": "nodemon src/backend/app.js",
+    "start-backend": "nodemon src/Backend/app.js",
     "start-dev": "NODE_ENV=DEV npm-run-all -p start-db start-frontend start-backend ",
     "start-db": "mongod",
     "build": "react-app-rewired build",
